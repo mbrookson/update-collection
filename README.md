@@ -17,10 +17,10 @@ It can be a pain to update a collection using another collection. This library i
       .UsingSource(source)
       .CompareWith((d, s) => d.Id == s.Id)
       .CreateWith(s => new Item { Id = s.Id, Name = s.Name, Date = DateTime.Now })
-      .UpdateWith((d, s) => { d.Name = s.Date +  updated"; })
+      .UpdateWith((d, s) => { d.Name = s.Name + " updated"; })
       .Execute();
 ```
 
 The above code would: 
-- Update the exiting item where `Id = 1` to have `Name = "B"`
-- Create a new item where `Id = 2` and `Name = "C"`
+- Update the exiting item where `Id = 1` to have `Name = "B updated"`
+- Create a new item where `Id = 2` and `Name = "C updated"`
