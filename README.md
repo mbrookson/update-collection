@@ -1,4 +1,7 @@
 # dotnet-update-collection
+
+[![Build Status](https://travis-ci.org/mbrookson/dotnet-update-collection.svg?branch=master)](https://travis-ci.org/mbrookson/dotnet-update-collection)
+
 Update a collection with another collection in .NET
 
 It can be a pain to update a collection using another collection. This library is designed to make this process easier, with a simple fluent API.
