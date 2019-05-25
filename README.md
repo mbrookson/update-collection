@@ -1,6 +1,6 @@
 # .NET - UpdateCollection
 
-[![Build Status](https://travis-ci.org/mbrookson/dotnet-update-collection.svg?branch=master)](https://travis-ci.org/mbrookson/dotnet-update-collection)
+[![Build Status](https://travis-ci.org/mbrookson/UpdateCollection.svg?branch=master)](https://travis-ci.org/mbrookson/UpdateCollection)
 
 Update a collection with another collection in .NET
 
