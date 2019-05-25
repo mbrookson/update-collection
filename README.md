@@ -1,6 +1,8 @@
 # .NET - UpdateCollection
 
-[![Build Status](https://travis-ci.org/mbrookson/UpdateCollection.svg?branch=master)](https://travis-ci.org/mbrookson/UpdateCollection)
+![GitHub](https://img.shields.io/github/license/mbrookson/updatecollection.svg)
+![Travis (.org) branch](https://img.shields.io/travis/mbrookson/updatecollection/master.svg?label=build%3Amaster)
+![Nuget](https://img.shields.io/nuget/v/UpdateCollection.svg)
 
 Update a collection with another collection in .NET
 
