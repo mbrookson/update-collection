@@ -45,7 +45,7 @@ The above code would:
   
 ### `.CompareWith((TDestination, TSource) => bool)` ###
 - To be chained to `.UsingSource()`
-- (param: func) A delegate that returns a boolean which is called for each item in the original collection as a comparator to use which matches against an item in the source collection.
+- (param: func) A delegate that returns a boolean which is called for each item in the source collection as a comparator to use which looks for a match against an item in the destination collection.
 
 ### `.CreateWith(TSource => TDestination)` ###
 - Optional method which can be chained to `.CompareWith()`
