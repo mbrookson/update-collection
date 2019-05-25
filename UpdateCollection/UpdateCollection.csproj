@@ -4,6 +4,12 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         <AssemblyName>UpdateCollection</AssemblyName>
         <RootNamespace>UpdateCollection</RootNamespace>
+        <Title>Update Collection</Title>
+        <Authors>mbrookson</Authors>
+        <Description>Fluent API to update a collection with another collection</Description>
+        <PackageProjectUrl>https://github.com/mbrookson/UpdateCollection</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/mbrookson/UpdateCollection</RepositoryUrl>
+        <RepositoryType>GitHub</RepositoryType>
     </PropertyGroup>
 
 </Project>
