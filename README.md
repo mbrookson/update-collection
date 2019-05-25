@@ -1,4 +1,4 @@
-# dotnet-update-collection
+# .NET - UpdateCollection
 
 [![Build Status](https://travis-ci.org/mbrookson/dotnet-update-collection.svg?branch=master)](https://travis-ci.org/mbrookson/dotnet-update-collection)
 
