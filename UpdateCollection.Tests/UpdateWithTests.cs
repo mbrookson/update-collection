@@ -11,7 +11,7 @@ namespace Tests
     public class UpdateWithTests
     {
         [TestMethod]
-        public void ShouldUpdateItemsThatAlreadyExist()
+        public void ShouldOnlyUpdateItemsThatAlreadyExist()
         {
             var destination = new List<Item> { new Item { Id = 1, Name = "A" }};
             var source = new List<Item>
@@ -23,14 +23,19 @@ namespace Tests
             destination = destination
                 .UsingSource(source)
                 .CompareWith((d, s) => d.Id == s.Id)
-                .UpdateWith((d, s) => { d.Name = s.Name; })
+                .CreateWith(s => new Item { Id = s.Id, Name = s.Name })
+                .UpdateWith((d, s) => { d.Name = s.Name + "-updated"; })
                 .Execute()
                 .ToList();
 
             destination.Should().NotBeNull();
-            destination.Should().HaveCount(1);
-            destination.First().Id.Should().Be(1);
-            destination.First().Name.Should().Be("B");
+            destination.Should().HaveCount(2);
+            
+            destination[0].Id.Should().Be(1);
+            destination[0].Name.Should().Be("B-updated");
+            
+            destination[1].Id.Should().Be(2);
+            destination[1].Name.Should().Be("C");
         }
     }
 }

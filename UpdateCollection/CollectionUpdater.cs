@@ -64,15 +64,18 @@ namespace UpdateCollection
             {
                 var destinationItem = _destination.FirstOrDefault(d => _compareFunc(d, sourceItem));
 
-                if (destinationItem == null && _createFunc != null)
+                if (destinationItem != null)
+                {
+                    _updateAction?.Invoke(destinationItem, sourceItem);
+                    continue;
+                }
+                
+                if (_createFunc != null)
                 {
                     destinationItem = _createFunc(sourceItem);
                     
                     _destination.Add(destinationItem);
                 }
-                
-                if (destinationItem != null)
-                    _updateAction?.Invoke(destinationItem, sourceItem);
             }
 
             if (_withDelete)
